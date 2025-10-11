@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — Joseph Mtaku</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet" />
+  <!-- Reuse your global stylesheet -->
+  <link rel="stylesheet" href="download_styles.css" />
+  <style>
+    /* —— Projects page additions (safe to keep inline or move into download_styles.css) —— */
+    body { font-family: 'Lexend Deca', system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
+
+    .page-title { margin: 32px 0 8px; font-size: 40px; line-height: 1.1; }
+    .page-subtitle { color: #555; margin-bottom: 28px; }
+
+    .filters { display: flex; flex-wrap: wrap; gap: 10px; margin: 12px 0 28px; }
+    .chip { border: 1px solid #ddd; padding: 8px 14px; border-radius: 999px; background: #fff; cursor: pointer; font-size: 14px; }
+    .chip.active { background: #00AEFF; color: #fff; border-color: transparent; }
+
+    .projects-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+    @media (max-width: 1024px) { .projects-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 640px)  { .projects-grid { grid-template-columns: 1fr; } }
+
+    .project-card { background: #fff; border-radius: 14px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,.06); display: flex; flex-direction: column; }
+    .project-thumb { position: relative; aspect-ratio: 16/9; background: #e9eef3; overflow: hidden; }
+    .project-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .project-body { padding: 18px; display: flex; flex-direction: column; gap: 12px; }
+    .project-title { margin: 0; font-size: 20px; }
+    .project-desc { margin: 0; color: #444; }
+
+    .badge-row { display: flex; flex-wrap: wrap; gap: 8px; }
+    .badge { font-size: 12px; background: #f1f5f9; border: 1px solid #e5e7eb; padding: 6px 10px; border-radius: 999px; }
+
+    .meta-row { display: flex; flex-wrap: wrap; gap: 18px; color: #666; font-size: 13px; }
+
+    .actions { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 10px; }
+    .btn { display: inline-block; text-decoration: none; padding: 10px 14px; border-radius: 8px; font-weight: 600; }
+    .btn-primary { background: #00AEFF; color: #fff; }
+    .btn-secondary { background: #000; color: #fff; }
+    .btn-ghost { background: #fff; color: #000; border: 1px solid #e5e7eb; }
+
+    .kicker { font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: #888; }
+
+    /* Small details dropdown styling */
+    details { border: 1px solid #e5e7eb; border-radius: 10px; padding: 10px 12px; background:#fafafa; }
+    details summary { cursor: pointer; font-weight: 600; }
+    details p, details li { color:#333; }
+    details code { background:#f3f4f6; padding:2px 6px; border-radius:6px; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <a href="HomePage.html">Home</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="Skills.html">Skills</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <p class="kicker">Featured</p>
+      <h1 class="page-title">Projects</h1>
+      <p class="page-subtitle">A mix of academic work and projects. Selected highlights below include short demo videos.</p>
+
+      <!-- ===== Featured: FloodBuddy (with video) ===== -->
+      <section class="feature" aria-label="FloodBuddy — Flood Awareness">
+        <div class="feature-wrap" style="display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center;">
+          <div>
+            <h2 style="margin:.2rem 0 0;">FloodBuddy - Real-Time Flood Data</h2>
+            <p class="project-desc" style="font-size:16px;">Developed an application to provide real-time flood data and enhance disaster response. Surfaces live alerts and map overlays to help communities prepare and respond faster.</p>
+            <div class="badge-row">
+              <span class="badge">React Native</span>
+              <span class="badge">REST APIs</span>
+              <span class="badge">Maps</span>
+              <span class="badge">Node.js</span>
+            </div>
+            <div class="meta-row" style="margin-top:8px;">
+              <span>Role: Front-end</span>
+              <span>Status: Completed</span>
+            </div>
+            <div class="actions" style="margin-top:12px;">
+              <a class="btn btn-secondary" href="https://github.com/Josephmtaku/FloodBuddy-App.git" target="_blank" rel="noreferrer">GitHub (App)</a>
+              <a class="btn btn-ghost" href="https://github.com/Josephmtaku/FloodBuddy-Portal-website-main.git" target="_blank" rel="noreferrer">GitHub (Admin Portal)</a>
+            </div>
+          </div>
+          <div>
+            <div class="project-thumb" style="aspect-ratio:auto;background:none;box-shadow:none;">
+              <video controls playsinline preload="metadata" poster="assets/floodbuddy-poster.jpg" style="width:100%;border-radius:14px;box-shadow:0 10px 25px rgba(0,0,0,.06);">
+                <source src="assets/floodbuddy-demo.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr style="margin:38px 0;border:0;border-top:1px solid #eee;" />
+
+      <!-- ===== Featured: GrabIT (with video) ===== -->
+      <section class="feature" aria-label="GrabIT - Checkout-Free Shopping">
+        <div class="feature-wrap" style="display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;align-items:center;">
+          <div class="project-thumb" style="aspect-ratio:auto;background:none;order:2;">
+            <video controls playsinline preload="metadata" poster="assets/grabit-poster.jpg" style="width:100%;border-radius:14px;box-shadow:0 10px 25px rgba(0,0,0,.06);">
+              <source src="assets/grabit-demo.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div style="order:1;">
+            <h2 style="margin:.2rem 0 0;">GrabIT - Checkout-Free Shopping</h2>
+            <p class="project-desc" style="font-size:16px;">Mobile app that lets customers scan products, pay securely, and receive a QR receipt for verification at exit. Includes admin dashboard for stock & analytics.</p>
+            <div class="badge-row">
+              <span class="badge">React Native</span>
+              <span class="badge">Node.js</span>
+              <span class="badge">Express</span>
+              <span class="badge">Supabase (Postgres)</span>
+            </div>
+            <div class="meta-row" style="margin-top:8px;">
+              <span>Role: Full-stack dev</span>
+              <span>Status: Completed</span>
+            </div>
+            <div class="actions" style="margin-top:12px;">
+              <a class="btn btn-secondary" href="https://github.com/Josephmtaku/Honours_Stage_Project_No_Checkout_Shop_Joseph_Mtaku.git" target="_blank" rel="noreferrer">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr style="margin:38px 0;border:0;border-top:1px solid #eee;" />
+
+      <!-- ===== Filters remain for the rest ===== -->
+      <div class="filters" id="filters">
+        <button class="chip active" data-filter="all">All</button>
+        <button class="chip" data-filter="fullstack">Full-stack</button>
+        <button class="chip" data-filter="mobile">Mobile</button>
+        <button class="chip" data-filter="backend">Backend/API</button>
+        <button class="chip" data-filter="web">Web</button>
+      </div>
+
+      <section class="projects-grid" id="projectsGrid">
+        <!-- Project: PSCI Hull Church Management -->
+        <article class="project-card" data-tags="fullstack web">
+          <div class="project-thumb">
+            <img src="assets/psci-thumb.jpg" alt="PSCI Hull Church Management web app" />
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">PSCI Hull - Church Management</h3>
+            <p class="project-desc">Multi-page web app for leaders/admins to manage members, attendance, lost-sheep tracking, and weekly reports with role-based access.</p>
+            <div class="badge-row">
+              <span class="badge">HTML</span>
+              <span class="badge">CSS</span>
+              <span class="badge">JavaScript</span>
+              <span class="badge">Supabase</span>
+            </div>
+            <div class="meta-row">
+              <span>Role: Front-end & DB</span>
+              <span>Status: Live</span>
+            </div>
+            <div class="actions">
+              <a class="btn btn-primary" href="https://josephmtaku.github.io/PSCI-church-Management-System/" target="_blank" rel="noreferrer">Live Site</a>
+              <a class="btn btn-secondary" href="https://github.com/Josephmtaku/PSCI-church-Management-System.git" target="_blank" rel="noreferrer">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ✅ NEW: whois — Networked Database Tool (replaces “Secure Web API — Distributed Systems”) -->
+        <article class="project-card" data-tags="backend">
+          <div class="project-thumb">
+            <img src="assets/whois-thumb.png" alt="whois networked database tool" />
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">whois - Networked Database Tool</h3>
+            <p class="project-desc">
+              C# client–server application exposing a MySQL-backed user accounts database over the network. Includes a static client and a TCP server that handles lookups, updates, and inserts, with simple URL-style queries
+            </p>
+            <div class="badge-row">
+              <span class="badge">C#</span>
+              <span class="badge">MySQL</span>
+              <span class="badge">TCP Server</span>
+              <span class="badge">Client App</span>
+              <span class="badge">Multithreading</span>
+            </div>
+            <div class="meta-row">
+              <span>Role: Full-stack (DB + Server + Client)</span>
+              <span>Status: Completed</span>
+            </div>
+            <div class="actions" style="margin-top:10px;">
+              <a class="btn btn-secondary" href="https://github.com/Josephmtaku/whois.git" target="_blank" rel="noreferrer">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project: Advanced Programming — Transport Network Route-Finder (your other academic) -->
+        <article class="project-card" data-tags="backend">
+          <div class="project-thumb">
+            <img src="assets/transport-net-thumb.png" alt="Transport network graph and route-finding" />
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Transport Network Route-Finder</h3>
+            <p class="project-desc">
+              C++ implementation of data structures and algorithms for a transport network (nodes & arcs) with precise input/output formats.
+              Supports distance queries, neighbour discovery, and journey validation; includes performance diagnostics (visited node/arc counts)
+              and fast route-finding using Dijkstra/A*.
+            </p>
+            <div class="badge-row">
+              <span class="badge">C++</span>
+            </div>
+            <div class="meta-row">
+              <span>Role: Systems & Algorithms</span>
+              <span>Status: Completed</span>
+            </div>
+            <div class="actions">
+              <a class="btn btn-secondary" href="https://github.com/500083-Advanced-Programming-2324/lab-i-final-lab-Josephmtaku.git" target="_blank" rel="noreferrer">GitHub</a>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <br /><br />
+      <p class="page-subtitle">Want more detail? <a href="contact.html">get in touch</a>.</p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 Joseph Mtaku</p>
+    </div>
+  </footer>
+
+  <script>
+    // Simple tag filtering (no dependencies)
+    const chips = document.querySelectorAll('.chip');
+    const cards = document.querySelectorAll('.project-card');
+
+    chips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        chips.forEach(c => c.classList.remove('active'));
+        chip.classList.add('active');
+        const tag = chip.dataset.filter;
+        cards.forEach(card => {
+          if (tag === 'all') { card.style.display = ''; return; }
+          const tags = (card.dataset.tags || '').split(/\s+/);
+          card.style.display = tags.includes(tag) ? '' : 'none';
+        });
+      });
+    });
+  </script>
+</body>
+</html>

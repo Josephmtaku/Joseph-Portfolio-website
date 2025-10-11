@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joseph Mtaku Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Homepage_styles.css">
+    <style>
+        /* ======= EXISTING STYLES (same as your page) ======= */
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Lexend Deca', sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+            font-size: 36px;
+            text-align: center;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .nav-item {
+            color: #333;
+            background-color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 10px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .nav-item:hover,
+        .nav-item.active {
+            background-color: #00AEFF;
+            color: #fff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: #000;
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        header img {
+            height: 60px;
+        }
+
+        nav a {
+            color: #fff;
+            margin-left: 20px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* ======= FOOTER STAY AT BOTTOM FIX ======= */
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* full height of viewport */
+        }
+
+        main {
+            flex: 1; /* push footer down */
+        }
+
+        footer {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* ======= Contact card (minimal, matches your style) ======= */
+        .contact-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 0;
+        }
+        .contact-card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            padding: 32px 28px;
+            max-width: 640px;
+            width: 100%;
+            text-align: center;
+        }
+        .contact-card h1 {
+            margin: 0 0 10px;
+        }
+        .contact-card p {
+            margin: 0 0 24px;
+            color: #555;
+        }
+        .contact-list {
+            display: grid;
+            gap: 14px;
+            font-size: 18px;
+        }
+        .contact-list a {
+            color: #00AEFF;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .contact-list a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="HomePage.html">Home</a>
+                <a href="Projects.html">Projects</a>
+                <a href="Skills.html">Skills</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container contact-wrap">
+            <div class="contact-card">
+                <h1>Contact Me</h1>
+                <p>I’m open to roles, collaborations, and interesting projects.</p>
+                <div class="contact-list">
+                    <div>📞 07404&nbsp;879&nbsp;754</div>
+                    <div>📧 <a href="mailto:j.mtaku@icloud.com">j.mtaku@icloud.com</a></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Joseph Mtaku</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Skills — Joseph Mtaku</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Homepage_styles.css">
+  <style>
+    /* ===== Global Structure ===== */
+    body, html {
+      height: 100%;
+      margin: 0;
+      font-family: 'Lexend Deca', sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    main {
+      flex: 1;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* ===== HEADER (exact same as your homepage) ===== */
+    header {
+      background-color: #000;
+      color: #fff;
+      padding: 20px 0;
+    }
+
+    header img {
+      height: 60px;
+    }
+
+    nav a {
+      color: #fff;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: normal;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    /* ===== SKILLS PAGE STYLING ===== */
+    .page-head {
+      padding: 44px 0 10px;
+    }
+
+    .kicker {
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: #475569;
+      font-size: 12px;
+      margin: 0 0 6px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: 40px;
+      line-height: 1.15;
+      text-align: center;
+    }
+
+    .subtitle {
+      margin: 0;
+      color: #475569;
+      max-width: 760px;
+      text-align: center;
+      margin-inline: auto;
+    }
+
+    .grid {
+      display: grid;
+      gap: 22px;
+      grid-template-columns: repeat(12, 1fr);
+      margin: 28px 0 46px;
+    }
+
+    @media (min-width: 720px) {
+      .span-6 { grid-column: span 6; }
+      .span-4 { grid-column: span 4; }
+      .span-12 { grid-column: span 12; }
+    }
+
+    @media (max-width: 719px) {
+      .span-6, .span-4, .span-12 { grid-column: span 12; }
+    }
+
+    .card {
+      grid-column: span 12;
+      background: #ffffffcc;
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(148,163,184,.22);
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(2, 8, 23, .08);
+      padding: 22px;
+      transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 40px rgba(2,8,23,.12);
+      border-color: rgba(0,174,255,.35);
+    }
+
+    .card h2 {
+      margin: 0 0 12px;
+      font-size: 20px;
+    }
+
+    .muted {
+      color: #475569;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .chip {
+      font-size: 13px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: #eef2f7;
+      border: 1px solid #e5e7eb;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .chip .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #00AEFF;
+      box-shadow: 0 0 0 3px rgba(0,174,255,.15);
+    }
+
+    .list {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0 0;
+    }
+
+    .list li {
+      padding: 10px 0;
+      border-top: 1px dashed rgba(148,163,184,.35);
+    }
+
+    .list li:first-child {
+      border-top: 0;
+    }
+
+    .callout {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      border-left: 3px solid #00AEFF;
+      padding-left: 16px;
+    }
+  </style>
+</head>
+<body>
+  <!-- ✅ Header identical to homepage -->
+  <header>
+    <div class="container">
+      <nav>
+        <a href="HomePage.html">Home</a>
+        <a href="Projects.html">Projects</a>
+        <a href="Skills.html" class="active">Skills</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div class="container">
+      <div class="page-head">
+        <p class="kicker">Capabilities</p>
+        <h1>Skills</h1>
+        <p class="subtitle">
+          Here is a breakdown of my technical and non technical skills.
+        </p>
+      </div>
+
+      <section class="grid">
+        <article class="card span-6">
+          <h2>Core Languages</h2>
+          <p class="muted">I am proficient in the use of the following languages</p>
+          <div class="chips">
+            <span class="chip"><span class="dot"></span>C#</span>
+            <span class="chip"><span class="dot"></span>C++</span>
+            <span class="chip"><span class="dot"></span>JavaScript</span>
+            <span class="chip"><span class="dot"></span>HTML</span>
+          </div>
+        </article>
+
+        <article class="card span-6">
+          <h2>Frameworks & Libraries</h2>
+          <p class="muted">I use the following tools to build UIs and clients.</p>
+          <div class="chips">
+            <span class="chip"><span class="dot"></span>React Native</span>
+            <span class="chip"><span class="dot"></span>Node.js</span>
+            <span class="chip"><span class="dot"></span>Express</span>
+          </div>
+        </article>
+      </section>
+
+      <section class="grid">
+        <article class="card span-6">
+          <h2>Databases</h2>
+          <p class="muted">Schema design and queries</p>
+          <div class="chips">
+            <span class="chip"><span class="dot"></span>MySQL</span>
+            <span class="chip"><span class="dot"></span>PostgreSQL</span>
+            <span class="chip"><span class="dot"></span>Supabase</span>
+          </div>
+          <ul class="list">
+            <li>Designing normalized schemas & indexes</li>
+            <li>Building RESTful data access layers</li>
+            <li>Auth & row-level security (JWT / policies)</li>
+          </ul>
+        </article>
+
+        <article class="card span-6">
+          <h2>Back-End & Systems</h2>
+          <ul class="list">
+            <li>C# API development (ASP.NET Core)</li>
+            <li>Client–server communication (sockets / HTTP)</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="grid">
+        <article class="card span-4">
+          <h2>Professional Skills</h2>
+          <ul class="list">
+            <li>Communication</li>
+            <li>Presentation</li>
+            <li>Problem-solving</li>
+            <li>Critical thinking</li>
+            <li>Organisation</li>
+            <li>Time management</li>
+            <li>Collaboration</li>
+            <li>Teamwork</li>
+          </ul>
+        </article>
+
+        <article class="card span-4">
+          <h2>Project Management</h2>
+          <ul class="list">
+            <li>Agile & Waterfall delivery</li>
+            <li>Backlog, sprints, and demos</li>
+            <li>Version control with Git/GitHub</li>
+          </ul>
+        </article>
+
+        <article class="card span-4">
+          <h2>Tooling</h2>
+          <div class="chips">
+            <span class="chip"><span class="dot"></span>Git / GitHub</span>
+            <span class="chip"><span class="dot"></span>Postman</span>
+            <span class="chip"><span class="dot"></span>VS Code</span>
+            <span class="chip"><span class="dot"></span>Figma</span>
+          </div>
+        </article>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 Joseph Mtaku</p>
+    </div>
+  </footer>
+</body>
+</html>
