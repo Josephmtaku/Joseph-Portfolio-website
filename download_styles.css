@@ -1,159 +1,126 @@
-/* ===== RESET ===== */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* ===== BASE ===== */
 body {
-  font-family: 'Lexend Deca', sans-serif;
-  background-color: #f5f5f5;
-  color: #111;
-  line-height: 1.6;
+    font-family: 'Lexend Deca', sans-serif;
 }
 
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-/* ===== HEADER ===== */
 header {
-  background-color: #000;
-  color: #fff;
-  padding: 20px 0;
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0;
 }
 
 header img {
-  height: 60px;
-}
-
-nav {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+    height: 60px;
 }
 
 nav a {
-  color: #fff;
-  margin-left: 20px;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 400;
-  transition: color 0.3s ease;
+    color: #fff;
+    margin-left: 20px;
+    text-decoration: none;
 }
 
 nav a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
-/* ===== MAIN ===== */
 main {
-  text-align: center;
-  padding: 100px 0;
+    text-align: center;
+    padding: 100px 0;
 }
 
-/* Headings & Paragraphs */
 h1 {
-  font-size: 36px;
-  margin-bottom: 20px;
+    font-size: 36px;
+    margin-bottom: 20px;
 }
 
 p {
-  font-size: 18px;
-  margin-bottom: 20px;
+    font-size: 18px;
+    margin-bottom: 20px;
 }
 
-/* ===== CONTENT SECTION ===== */
-.content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center; /* keeps text and image vertically aligned */
-  gap: 24px;
-  flex-wrap: wrap; /* allows it to stack on small screens */
-}
-
-.text {
-  width: 60%;
-  text-align: left;
-}
-
-.image {
-  width: 35%;
-  text-align: right;
-}
-
-/* ===== IMAGE FIX ===== */
-.image img {
-  display: block;
-  width: 100%;
-  height: auto;          /* preserve aspect ratio */
-  max-height: 70vh;      /* optional: prevents image from being too tall */
-  object-fit: contain;   /* ensures image fits within the box */
-  border-radius: 8px;    /* optional: subtle rounded corners */
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* optional: soft depth */
-}
-
-/* ===== BUTTONS ===== */
 .button-group {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+    display: flex;
+    flex-direction: column;
 }
 
 .get-started-btn {
-  background-color: #000;
-  color: #fff;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 5px;
-  font-size: 20px;
-  transition: background-color 0.3s ease;
-  margin-bottom: 10px;
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 20px;
+    transition: background-color 0.3s;
+    margin-bottom: 10px; 
 }
 
 .get-started-btn:hover {
-  background-color: #333;
+    background-color: #333;
 }
 
 .download-text {
-  margin-bottom: 10px;
-  font-size: 16px;
+    margin: 2; 
 }
 
-/* ===== FOOTER ===== */
 footer {
-  background-color: #000;
-  color: #fff;
-  padding: 33px 0;
-  text-align: center;
-  margin-top: auto;
+    background-color: #000;
+    color: #fff;
+    padding: 33px 0;
+    text-align: center;
+    margin-top: 170px;
 }
 
-/* ===== RESPONSIVE DESIGN ===== */
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* added for better vertical alignment */
+    gap: 20px; /* optional small gap */
+}
+
+.text {
+    width: 60%;
+}
+
+.image {
+    width: 35%;
+    text-align: right;
+}
+
+/* ✅ FIXED IMAGE STRETCH ISSUE */
+.image img {
+    max-width: 100%;
+    height: auto; /* changed from 100% to auto to prevent squish */
+    object-fit: contain; /* ensures image keeps proportions */
+    border-radius: 5px; /* optional, subtle rounding */
+}
+
+/* ✅ OPTIONAL: Responsive layout for small screens */
 @media (max-width: 800px) {
-  main {
-    padding: 60px 0;
-  }
+    .content {
+        flex-direction: column;
+        text-align: center;
+    }
 
-  .content {
-    flex-direction: column;
-    text-align: center;
-  }
+    .text, .image {
+        width: 100%;
+    }
 
-  .text,
-  .image {
-    width: 100%;
-    text-align: center;
-  }
+    .image {
+        text-align: center;
+    }
 
-  .image img {
-    max-height: 50vh;
-  }
-
-  .button-group {
-    align-items: center;
-  }
+    .image img {
+        max-width: 80%;
+    }
 }
