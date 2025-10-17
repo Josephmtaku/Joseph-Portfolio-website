@@ -97,7 +97,6 @@ footer {
     text-align: right;
 }
 
-/* ✅ FIXED IMAGE STRETCH ISSUE */
 .image img {
     max-width: 100%;
     height: auto; /* changed from 100% to auto to prevent squish */
@@ -105,7 +104,6 @@ footer {
     border-radius: 5px; /* optional, subtle rounding */
 }
 
-/* ✅ OPTIONAL: Responsive layout for small screens */
 @media (max-width: 800px) {
     .content {
         flex-direction: column;
