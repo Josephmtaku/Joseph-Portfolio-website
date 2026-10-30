@@ -76,7 +76,7 @@ const CLIPS = [
 ];
 
 const SKILLS = {
-  languages:    { title: 'Core languages', items: ['C#', 'C++', 'JavaScript', 'HTML'] },
+  languages:    { title: 'Core languages', items: ['C#', 'C++', 'JavaScript', 'HTML', 'Apex'] },
   frameworks:   { title: 'Frameworks & libraries', items: ['React Native', 'Node.js', 'Express'] },
   databases:    { title: 'Databases', items: ['MySQL', 'PostgreSQL', 'Supabase'], notes: ['Designing normalized schemas & indexes', 'Building RESTful data access layers', 'Auth & row-level security (JWT / policies)'] },
   backend:      { title: 'Back-end & systems', notes: ['C# API development (ASP.NET Core)', 'Client–server communication (sockets / HTTP)'] },
