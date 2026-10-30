@@ -46,7 +46,7 @@ const PROJECTS = [
   { id: 'church', name: 'Church Management System', title: 'Church Management System',
     desc: 'Multi-page web app for leaders/admins to manage members, attendance, lost-sheep tracking, and weekly reports with role-based access.',
     tags: ['fullstack', 'web'], badges: ['HTML', 'CSS', 'JavaScript', 'Supabase'], role: 'Front-end & DB', status: 'Live',
-    thumb: 'assets/psci-thumb.png', thumbSmall: 'assets/psci-thumb.jpg',
+    thumb: 'assets/psci-thumb.png', thumbSmall: 'assets/psci-thumb.png',
     links: [['Live site', 'https://josephmtaku.github.io/PSCI-church-Management-System/', true], ['GitHub', 'https://github.com/Josephmtaku/PSCI-church-Management-System.git']] },
   { id: 'whois', name: 'whois', title: 'whois - Networked Database Tool',
     desc: 'C# client–server application exposing a MySQL-backed user accounts database over the network. Includes a static client and a TCP server that handles lookups, updates, and inserts, with simple URL-style queries',
