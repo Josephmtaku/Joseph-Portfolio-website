@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" data-wall="dusk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Joseph Mtaku | Software Engineer</title>
+<meta name="description" content="Portfolio of Joseph Mtaku, a software engineer building full-stack, systems and Salesforce projects.">
+<meta name="theme-color" content="#0b1230">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script>
+/* Apply saved look before first paint so there is no flash */
+(function () {
+  try {
+    var t = localStorage.getItem('jm:theme') || 'dark';
+    if (t === 'auto') t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    var r = document.documentElement;
+    r.dataset.theme = t;
+    r.dataset.wall = localStorage.getItem('jm:wall') || 'dusk';
+    var a = localStorage.getItem('jm:accent');
+    if (a) r.style.setProperty('--accent', a);
+  } catch (e) {}
+})();
+</script>
+<link rel="stylesheet" href="mac.css">
+</head>
+<body>
+
+<noscript>
+  <div class="noscript">
+    <h1>Joseph Mtaku</h1>
+    <p>This desktop needs JavaScript. You can still browse the <a href="HomePage.html">classic portfolio</a>.</p>
+  </div>
+</noscript>
+
+<div id="wallpaper" aria-hidden="true"></div>
+
+<!-- Start-up -->
+<div id="boot" aria-hidden="true">
+  <div class="boot-mark">J</div>
+  <div class="boot-bar"><i></i></div>
+</div>
+
+<!-- Lock screen -->
+<main id="login" hidden>
+  <div class="login-time">
+    <div class="login-date" id="loginDate"></div>
+    <div class="login-clock" id="loginClock"></div>
+  </div>
+  <div class="login-card">
+    <img class="login-avatar" src="assets/IMG_9568.JPG" alt="Joseph Mtaku" width="96" height="96">
+    <h1 class="login-name">Joseph Mtaku</h1>
+    <p class="login-role">Software Engineer</p>
+    <button class="login-field" id="loginBtn" type="button">
+      <span class="login-dots" id="loginDots" aria-hidden="true"></span>
+      <span class="login-hint" id="loginHint">Click to enter</span>
+      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="currentColor" opacity=".22"/><path d="M10 7l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <a class="login-classic" href="HomePage.html">Prefer the classic site?</a>
+  </div>
+</main>
+
+<!-- Desktop -->
+<div id="desktop" hidden>
+  <header id="menubar" role="menubar" aria-label="Menu bar">
+    <div class="mb-left" id="mbLeft"></div>
+    <div class="mb-right">
+      <button class="mb-btn" id="mbSearch" type="button" aria-label="Search (Spotlight)">
+        <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15.5 15.5L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <button class="mb-btn" id="mbTheme" type="button" aria-label="Switch light or dark appearance"></button>
+      <time class="mb-clock" id="mbClock"></time>
+    </div>
+  </header>
+
+  <div id="desk-icons" aria-label="Desktop"></div>
+  <div id="windows"></div>
+
+  <nav id="dock-wrap" aria-label="Dock"><div id="dock"></div></nav>
+</div>
+
+<div id="menu-layer"></div>
+<div id="toasts" aria-live="polite"></div>
+<div id="notif" role="status"></div>
+
+<div id="spotlight" hidden>
+  <div class="sp-panel" role="dialog" aria-label="Search">
+    <div class="sp-field">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15.5 15.5L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <input id="spInput" type="text" placeholder="Search projects, skills and contact" autocomplete="off" spellcheck="false" aria-label="Search">
+    </div>
+    <ul class="sp-results" id="spResults" role="listbox"></ul>
+  </div>
+</div>
+
+<script src="mac.js"></script>
+</body>
+</html>
