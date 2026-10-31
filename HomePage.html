@@ -6,13 +6,14 @@
     <title>Joseph Mtaku Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="download_styles.css">
+<link rel="stylesheet" href="polish.css">
 </head>
 <body>
     <header>
         <div class="container">
             
             <nav>
-                <a href="HomePage.html">Home</a>
+                <a href="HomePage.html" class="active">Home</a>
                 <a href="Projects.html">Projects</a>
                 <a href="Skills.html">Skills</a>
                 <a href="contact.html">Contact</a>
@@ -28,7 +29,7 @@
                     <p>I am an enthusiastic and adaptable Software Engineer with experience in object-oriented programming. I am a quick learner and team player who brings strong communication skills and a creative approach to problem-solving. I am eager to contribute to a progressive organization and deliver value through innovation and collaboration.</p>
                     <p class="download-text">Want to see some of my work?</p>
                     <div class="button-group">
-                        <a href="Projects.html" class="get-started-btn">Projects</a>
+                        <a href="Projects.html" class="get-started-btn btn-projects">View my projects <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg></a>
                         <a href="desktop.html" class="cool" id="coolBtn" aria-label="Want to see something cool? Opens an interactive desktop version of this portfolio">
                             <span class="cool-in">
                                 <span class="cool-lights" aria-hidden="true"><i></i><i></i><i></i></span>
@@ -57,8 +58,7 @@
         var fx = document.getElementById('bootfx');
         function boot(e) {
             if (e) e.preventDefault();
-            var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-            if (reduce) { location.href = 'desktop.html'; return; }
+            if (matchMedia('(prefers-reduced-motion: reduce)').matches) { location.href = 'desktop.html'; return; }
             fx.classList.add('on');
             setTimeout(function () { location.href = 'desktop.html'; }, 1000);
         }
@@ -71,7 +71,6 @@
             buf = (buf + e.key.toLowerCase()).slice(-4);
             if (buf.slice(-3) === 'mac' || buf === 'cool') boot();
         });
-        /* come back from the back button cleanly */
         addEventListener('pageshow', function () { fx.classList.remove('on'); });
     })();
     </script>
