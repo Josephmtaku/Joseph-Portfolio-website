@@ -53,7 +53,7 @@ footer p { margin: 0; font-size: 14px; opacity: .85; }
 /* ----- projects ----- */
 .kicker { color: #6b7686 !important; }
 .page-title { letter-spacing: -.02em; }
-.page-subtitle { color: var(--muted) !important; max-width: 70ch; }
+.page-subtitle { color: var(--muted) !important; max-width: 70ch; margin-left: auto !important; margin-right: auto !important; text-align: center; }
 .filters { gap: 8px; }
 .chip { border-color: var(--line); color: var(--muted); font-family: inherit; font-weight: 500; transition: all .2s; }
 .chip:hover { color: var(--ink); border-color: #b8c2d0; }
@@ -102,3 +102,5 @@ footer p { margin: 0; font-size: 14px; opacity: .85; }
 .feature .badge-row { margin-top: 16px; }
 .feature .meta-row { margin-top: 12px !important; }
 .feature .actions { margin-top: 16px !important; }
+
+.page-title, .kicker { text-align: center; }
