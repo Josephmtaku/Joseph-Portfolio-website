@@ -1,99 +1,154 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="dark" data-wall="dusk">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Joseph Mtaku | Desktop</title>
-<meta name="description" content="Portfolio of Joseph Mtaku, a software engineer building full-stack, systems and Salesforce projects.">
-<meta name="theme-color" content="#0b1230">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<script>
-/* Apply saved look before first paint so there is no flash */
-(function () {
-  try {
-    var t = localStorage.getItem('jm:theme') || 'dark';
-    if (t === 'auto') t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    var r = document.documentElement;
-    r.dataset.theme = t;
-    r.dataset.wall = localStorage.getItem('jm:wall') || 'dusk';
-    var a = localStorage.getItem('jm:accent');
-    if (a) r.style.setProperty('--accent', a);
-  } catch (e) {}
-})();
-</script>
-<link rel="stylesheet" href="mac.css">
-</head>
-<body>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-<noscript>
-  <div class="noscript">
-    <h1>Joseph Mtaku</h1>
-    <p>This desktop needs JavaScript. You can still browse the <a href="HomePage.html">classic portfolio</a>.</p>
-  </div>
-</noscript>
+body {
+    font-family: 'Lexend Deca', sans-serif;
+}
 
-<div id="wallpaper" aria-hidden="true"></div>
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
-<!-- Start-up -->
-<div id="boot" aria-hidden="true">
-  <div class="boot-mark">J</div>
-  <div class="boot-bar"><i></i></div>
-</div>
+header {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0;
+}
 
-<!-- Lock screen -->
-<main id="login" hidden>
-  <div class="login-time">
-    <div class="login-date" id="loginDate"></div>
-    <div class="login-clock" id="loginClock"></div>
-  </div>
-  <div class="login-card">
-    <img class="login-avatar" src="assets/IMG_9568.JPG" alt="Joseph Mtaku" width="96" height="96">
-    <h1 class="login-name">Joseph Mtaku</h1>
-    <p class="login-role">Software Engineer</p>
-    <button class="login-field" id="loginBtn" type="button">
-      <span class="login-dots" id="loginDots" aria-hidden="true"></span>
-      <span class="login-hint" id="loginHint">Click to enter</span>
-      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="currentColor" opacity=".22"/><path d="M10 7l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </button>
-    <a class="login-classic" href="HomePage.html">Prefer the classic site?</a>
-  </div>
-</main>
+header img {
+    height: 60px;
+}
 
-<!-- Desktop -->
-<div id="desktop" hidden>
-  <header id="menubar" role="menubar" aria-label="Menu bar">
-    <div class="mb-left" id="mbLeft"></div>
-    <div class="mb-right">
-      <button class="mb-btn" id="mbSearch" type="button" aria-label="Search (Spotlight)">
-        <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15.5 15.5L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-      </button>
-      <button class="mb-btn" id="mbTheme" type="button" aria-label="Switch light or dark appearance"></button>
-      <time class="mb-clock" id="mbClock"></time>
-    </div>
-  </header>
+nav a {
+    color: #fff;
+    margin-left: 20px;
+    text-decoration: none;
+}
 
-  <div id="desk-icons" aria-label="Desktop"></div>
-  <div id="windows"></div>
+nav a:hover {
+    text-decoration: underline;
+}
 
-  <nav id="dock-wrap" aria-label="Dock"><div id="dock"></div></nav>
-</div>
+main {
+    text-align: center;
+    padding: 100px 0;
+}
 
-<div id="menu-layer"></div>
-<div id="toasts" aria-live="polite"></div>
-<div id="notif" role="status"></div>
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
 
-<div id="spotlight" hidden>
-  <div class="sp-panel" role="dialog" aria-label="Search">
-    <div class="sp-field">
-      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15.5 15.5L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-      <input id="spInput" type="text" placeholder="Search projects, skills and contact" autocomplete="off" spellcheck="false" aria-label="Search">
-    </div>
-    <ul class="sp-results" id="spResults" role="listbox"></ul>
-  </div>
-</div>
+p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
 
-<script src="mac.js"></script>
-</body>
-</html>
+.button-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.get-started-btn {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 20px;
+    transition: background-color 0.3s;
+    margin-bottom: 10px; 
+}
+
+.get-started-btn:hover {
+    background-color: #333;
+}
+
+.download-text {
+    margin: 2; 
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 33px 0;
+    text-align: center;
+    margin-top: 170px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* added for better vertical alignment */
+    gap: 20px; /* optional small gap */
+}
+
+.text {
+    width: 60%;
+}
+
+.image {
+    width: 35%;
+    text-align: right;
+}
+
+.image img {
+    max-width: 100%;
+    height: auto; /* changed from 100% to auto to prevent squish */
+    object-fit: contain; /* ensures image keeps proportions */
+    border-radius: 5px; /* optional, subtle rounding */
+}
+
+@media (max-width: 800px) {
+    .content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text, .image {
+        width: 100%;
+    }
+
+    .image {
+        text-align: center;
+    }
+
+    .image img {
+        max-width: 80%;
+    }
+}
+
+/* ===== "Want to see something cool?" teaser ===== */
+/* "Something cool" teaser */
+@property --a { syntax: '<angle>'; initial-value: 0deg; inherits: false; }
+.cool { position: relative; display: block; margin-top: 4px; padding: 2px; border-radius: 12px; text-decoration: none; color: #fff;
+        background: conic-gradient(from var(--a), #00AEFF, #8B7CFF, #FF5C7A, #FF9F0A, #30D158, #00AEFF);
+        animation: coolspin 4s linear infinite; box-shadow: 0 0 22px rgba(0,174,255,.35), 0 0 46px rgba(139,124,255,.22);
+        transition: transform .25s ease, box-shadow .25s ease; }
+@keyframes coolspin { to { --a: 360deg; } }
+.cool:hover, .cool:focus-visible { transform: translateY(-2px) scale(1.012); box-shadow: 0 0 30px rgba(0,174,255,.6), 0 0 70px rgba(255,92,122,.35); outline: none; }
+.cool-in { display: flex; align-items: center; gap: 14px; padding: 14px 18px; border-radius: 10px; background: #0d1014; }
+.cool-lights { display: flex; gap: 6px; flex: none; }
+.cool-lights i { width: 11px; height: 11px; border-radius: 50%; display: block; }
+.cool-lights i:nth-child(1) { background: #ff5f57; } .cool-lights i:nth-child(2) { background: #febc2e; } .cool-lights i:nth-child(3) { background: #28c840; }
+.cool-txt { flex: 1; text-align: center; font-size: 20px; }
+.cool-txt small { display: block; font-size: 12px; opacity: .6; margin-top: 2px; letter-spacing: .02em; }
+.cool-go { flex: none; font-size: 12px; font-weight: 600; padding: 5px 10px; border-radius: 7px; background: rgba(255,255,255,.1); transition: background .25s; white-space: nowrap; }
+.cool:hover .cool-go { background: #00AEFF; }
+.cool-cursor { display: inline-block; width: 2px; height: 1em; background: #00AEFF; margin-left: 3px; vertical-align: -2px; animation: coolblink 1s steps(1) infinite; }
+@keyframes coolblink { 50% { opacity: 0; } }
+@media (max-width: 520px) { .cool-go { display: none; } .cool-txt { font-size: 17px; } }
+@media (prefers-reduced-motion: reduce) { .cool { animation: none; } .cool-cursor { animation: none; } }
+/* boot transition */
+#bootfx { position: fixed; inset: 0; z-index: 9999; background: #05070f; display: grid; place-items: center; opacity: 0; pointer-events: none; transition: opacity .45s ease; }
+#bootfx.on { opacity: 1; pointer-events: auto; }
+#bootfx b { display: grid; place-items: center; width: 84px; height: 84px; border-radius: 22px; font: 700 42px/1 sans-serif; color: #fff; background: linear-gradient(160deg,#00AEFF,#8B7CFF); box-shadow: 0 0 60px rgba(0,174,255,.5); }
+#bootfx i { position: absolute; top: calc(50% + 70px); width: 150px; height: 4px; border-radius: 4px; background: rgba(255,255,255,.15); overflow: hidden; }
+#bootfx i::after { content: ''; display: block; height: 100%; width: 0; background: #fff; border-radius: 4px; }
+#bootfx.on i::after { width: 100%; transition: width .9s ease; }
+.image a { cursor: pointer; }
