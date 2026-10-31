@@ -1,17 +1,3 @@
-/* ==========================================================================
-   content.js  —  THE ONE PLACE TO EDIT YOUR PORTFOLIO
-   --------------------------------------------------------------------------
-   Everything on both the classic site and the Mac desktop is read from here:
-   your bio, contact details, projects and skills.
-   Change something here, save, and both versions update.
-
-   Tips
-   - Keep the quotes ' ' and the commas , exactly as you see them.
-   - To add a project, copy one whole { ... }, block and paste it in the list.
-   - To add a skill, copy one line like  { name: 'C#', icon: 'csharp' },
-   - Logos live in assets/icons/ (icon: 'csharp' means assets/icons/csharp.svg).
-     Leave icon out and the skill shows a small dot instead.
-   ========================================================================== */
 window.SITE = {
 
   /* ---------- About and contact ---------- */
