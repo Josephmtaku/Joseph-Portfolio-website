@@ -35,7 +35,7 @@ const GITHUB = 'https://github.com/Josephmtaku';
 const PROJECTS = [
   { id: 'floodbuddy', name: 'FloodBuddy', title: 'FloodBuddy - Real-Time Flood Data',
     desc: 'Developed an application to provide real-time flood data and enhance disaster response. Surfaces live alerts and map overlays to help communities prepare and respond faster.',
-    tags: ['mobile'], badges: ['React Native', 'REST APIs', 'Maps', 'Node.js'], role: 'Front-end', status: 'Completed',
+    tags: ['mobile'], badges: ['React Native', 'REST APIs', 'Maps', 'Node.js'], role: 'Full-stack dev', status: 'Completed',
     thumb: 'assets/floodbuddy-poster.jpg', demo: 'floodbuddy',
     links: [['GitHub (App)', 'https://github.com/Josephmtaku/FloodBuddy-App.git'], ['GitHub (Admin Portal)', 'https://github.com/Josephmtaku/FloodBuddy-Portal-website-main.git']] },
   { id: 'grabit', name: 'GrabIT', title: 'GrabIT - Checkout-Free Shopping',
@@ -45,7 +45,7 @@ const PROJECTS = [
     links: [['GitHub', 'https://github.com/Josephmtaku/Honours_Stage_Project_No_Checkout_Shop_Joseph_Mtaku.git']] },
   { id: 'church', name: 'Church Management System', title: 'Church Management System',
     desc: 'Multi-page web app for leaders/admins to manage members, attendance, lost-sheep tracking, and weekly reports with role-based access.',
-    tags: ['fullstack', 'web'], badges: ['HTML', 'CSS', 'JavaScript', 'Supabase'], role: 'Front-end & DB', status: 'Live',
+    tags: ['fullstack', 'web'], badges: ['HTML', 'CSS', 'JavaScript', 'Supabase'], role: 'Full-stack dev', status: 'Live',
     thumb: 'assets/psci-thumb.png', thumbSmall: 'assets/psci-thumb.png',
     links: [['Live site', 'https://josephmtaku.github.io/PSCI-church-Management-System/', true], ['GitHub', 'https://github.com/Josephmtaku/PSCI-church-Management-System.git']] },
   { id: 'whois', name: 'whois', title: 'whois - Networked Database Tool',
