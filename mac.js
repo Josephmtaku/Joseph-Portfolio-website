@@ -27,64 +27,17 @@ const MOD = isMac ? '⌘' : 'Ctrl ';
 const MB = 28; // menu bar height
 const wait = ms => new Promise(r => setTimeout(r, ms));
 
-const EMAIL = 'j.mtaku@icloud.com';
-const PHONE = '07404 879 754';
-const GITHUB = 'https://github.com/Josephmtaku';
-
-/* ---------- content (taken from the original site) ---------- */
-const PROJECTS = [
-  { id: 'floodbuddy', name: 'FloodBuddy', title: 'FloodBuddy - Real-Time Flood Data',
-    desc: 'Developed an application to provide real-time flood data and enhance disaster response. Surfaces live alerts and map overlays to help communities prepare and respond faster.',
-    tags: ['mobile'], badges: ['React Native', 'REST APIs', 'Maps', 'Node.js'], role: 'Full-stack dev', status: 'Completed',
-    thumb: 'assets/floodbuddy-poster.jpg', demo: 'floodbuddy',
-    links: [['GitHub (App)', 'https://github.com/Josephmtaku/FloodBuddy-App.git'], ['GitHub (Admin Portal)', 'https://github.com/Josephmtaku/FloodBuddy-Portal-website-main.git']] },
-  { id: 'grabit', name: 'GrabIT', title: 'GrabIT - Checkout-Free Shopping',
-    desc: 'Mobile app that lets customers scan products, pay securely, and receive a QR receipt for verification at exit. Includes admin dashboard for stock & analytics.',
-    tags: ['mobile', 'fullstack'], badges: ['React Native', 'Node.js', 'Express', 'Supabase (Postgres)'], role: 'Full-stack dev', status: 'Completed',
-    thumb: 'assets/grabit-poster.jpg', demo: 'grabit',
-    links: [['GitHub', 'https://github.com/Josephmtaku/Honours_Stage_Project_No_Checkout_Shop_Joseph_Mtaku.git']] },
-  { id: 'church', name: 'Church Management System', title: 'Church Management System',
-    desc: 'Multi-page web app for leaders/admins to manage members, attendance, lost-sheep tracking, and weekly reports with role-based access.',
-    tags: ['fullstack', 'web'], badges: ['HTML', 'CSS', 'JavaScript', 'Supabase'], role: 'Full-stack dev', status: 'Live',
-    thumb: 'assets/psci-thumb.png', thumbSmall: 'assets/psci-thumb.png',
-    links: [['Live site', 'https://josephmtaku.github.io/PSCI-church-Management-System/', true], ['GitHub', 'https://github.com/Josephmtaku/PSCI-church-Management-System.git']] },
-  { id: 'whois', name: 'whois', title: 'whois - Networked Database Tool',
-    desc: 'C# client–server application exposing a MySQL-backed user accounts database over the network. Includes a static client and a TCP server that handles lookups, updates, and inserts, with simple URL-style queries',
-    tags: ['backend'], badges: ['C#', 'MySQL', 'TCP Server', 'Client App', 'Multithreading'], role: 'Full-stack (DB + Server + Client)', status: 'Completed',
-    thumb: 'assets/whois-thumb.png',
-    links: [['GitHub', 'https://github.com/Josephmtaku/whois.git']] },
-  { id: 'transport', name: 'Transport Network Route-Finder', title: 'Transport Network Route-Finder',
-    desc: 'C++ implementation of data structures and algorithms for a transport network (nodes & arcs) with precise input/output formats. Supports distance queries, neighbour discovery, and journey validation; includes performance diagnostics (visited node/arc counts) and fast route-finding using Dijkstra/A*.',
-    tags: ['backend'], badges: ['C++'], role: 'Systems & Algorithms', status: 'Completed',
-    thumb: 'assets/transport-net-thumb.png',
-    links: [['GitHub', 'https://github.com/500083-Advanced-Programming-2324/lab-i-final-lab-Josephmtaku.git']] },
-  { id: 'smartqueue', name: 'Smart Queue Prioritisation', title: 'Smart Queue Prioritisation - Salesforce Omni‑Channel',
-    desc: 'Implemented an intelligent routing system for Salesforce Service Cloud. By separating Live Chat and WhatsApp requests into distinct Omni‑Channel queues and assigning different routing priorities, I eliminated missed chats and improved response times. The solution uses Apex, custom queues and presence statuses all built in an org.',
-    tags: ['backend', 'web', 'salesforce'], badges: ['Salesforce', 'Apex', 'Service Cloud', 'Omni‑Channel'], role: 'Developer', status: 'Completed',
-    thumb: 'assets/smartqueue-thumb.png',
-    links: [['Case study', 'https://docs.google.com/document/d/1qB0E5MQZLDS8s83pcL0P8GY7R6nPbl87PqE7O4NcEtc/edit?usp=sharing', true]] },
-  { id: 'billing', name: 'Telecom Billing System', title: 'Telecom Billing System (Salesforce)',
-    desc: 'Salesforce app built by a 12-person team to replace manual Excel billing for 3,000+ telecom customers. Plans, customers, bills and usage records are modelled as linked custom objects, with roll-up and formula fields that calculate each bill automatically from usage and plan allowances. Includes validation rules, a unique-email constraint, role-based security, plan change tracking and a branded Lightning app.',
-    tags: ['backend', 'web', 'salesforce'], badges: ['Salesforce', 'Apex', 'Formula Fields', 'Validation Rules', 'Data Loader', 'Lightning App'], role: 'Administrator & Tester', status: 'Completed',
-    thumb: 'assets/Telecom%20Billing%20System%20Showcase.png',
-    links: [] },
-];
-
-const CLIPS = [
-  { id: 'floodbuddy', title: 'FloodBuddy', sub: 'React Native flood alerts app', file: 'assets/floodbuddy-demo.mp4', poster: 'assets/floodbuddy-poster.jpg' },
-  { id: 'grabit', title: 'GrabIT', sub: 'Checkout-free shopping app', file: 'assets/grabit-demo.mp4', poster: 'assets/grabit-poster.jpg' },
-];
-
-const SKILLS = {
-  languages:    { title: 'Core languages', items: ['C#', 'C++', 'JavaScript', 'HTML', 'Apex'] },
-  frameworks:   { title: 'Frameworks & libraries', items: ['React Native', 'Node.js', 'Express'] },
-  databases:    { title: 'Databases', items: ['MySQL', 'PostgreSQL', 'Supabase'], notes: ['Designing normalized schemas & indexes', 'Building RESTful data access layers', 'Auth & row-level security (JWT / policies)'] },
-  backend:      { title: 'Back-end & systems', notes: ['C# API development (ASP.NET Core)', 'Client–server communication (sockets / HTTP)'] },
-  salesforce:   { title: 'Salesforce', items: ['Apex', 'Omni-Channel', 'Lightning apps', 'Validation rules', 'Formula fields', 'Data Loader'] },
-  tooling:      { title: 'Tooling', items: ['Git / GitHub', 'Postman', 'VS Code', 'Figma', 'XML'] },
-  pm:           { title: 'Project management', notes: ['Agile & Waterfall methodologies', 'Backlog, sprints, and demos', 'Version control with Git/GitHub'] },
-  professional: { title: 'Professional skills', items: ['Communication', 'Presentation', 'Problem-solving', 'Critical thinking', 'Organisation', 'Time management', 'Collaboration', 'Teamwork'] },
-};
+/* ---------- content: read from content.js (edit THAT file, not this one) ---------- */
+const SITE = window.SITE || { profile: {}, projects: [], skills: [] };
+const P = SITE.profile;
+const EMAIL = P.email, PHONE = P.phone, GITHUB = P.github;
+const PROJECTS = SITE.projects.map(p => Object.assign({}, p, {
+  demo: p.video ? p.id : null,
+  links: (p.links || []).map(l => [l.label, l.href, !!l.primary]),
+}));
+const CLIPS = PROJECTS.filter(p => p.video).map(p => ({ id: p.id, title: p.name, sub: p.video.tagline || '', file: p.video.file, poster: p.video.poster }));
+const SKILLS = {};
+SITE.skills.forEach(g => { SKILLS[g.key] = { title: g.title, sub: g.sub, chips: g.items || [], items: (g.items || []).map(i => i.name), notes: g.notes }; });
 
 /* ---------- original icons (no third-party artwork) ---------- */
 const G = {
@@ -365,23 +318,23 @@ const BUILD = {};
 BUILD.about = (w) => {
   w.body.innerHTML = `
     <article class="about">
-      <img class="about-photo" src="assets/IMG_9568.JPG" alt="Portrait of Joseph Mtaku" width="208" height="208">
+      <img class="about-photo" src="${esc(P.photo)}" alt="Portrait of ${esc(P.name)}" width="208" height="208">
       <div>
-        <h2>Joseph Mtaku</h2>
-        <p class="role">Software Engineer</p>
-        <p>I am an enthusiastic and adaptable Software Engineer with experience in object-oriented programming. I am a quick learner and team player who brings strong communication skills and a creative approach to problem-solving. I am eager to contribute to a progressive organization and deliver value through innovation and collaboration.</p>
+        <h2>${esc(P.name)}</h2>
+        <p class="role">${esc(P.role)}</p>
+        <p>${esc(P.bio)}</p>
         <div class="acts">
           <button class="btn btn-primary" type="button" data-go="projects">View projects</button>
           <button class="btn btn-plain" type="button" data-go="contact">Say hello</button>
           <button class="btn btn-plain" type="button" data-go="skills">See skills</button>
         </div>
         <dl>
-          <dt>Role</dt><dd>Software Engineer</dd>
-          <dt>Focus</dt><dd>Full-stack development, systems programming and Salesforce</dd>
+          <dt>Role</dt><dd>${esc(P.role)}</dd>
+          <dt>Focus</dt><dd>${esc(P.focus)}</dd>
           <dt>Languages</dt><dd>${SKILLS.languages.items.join(', ')}</dd>
-          <dt>Builds with</dt><dd>${SKILLS.frameworks.items.join(', ')}, Supabase, MySQL</dd>
+          <dt>Builds with</dt><dd>${esc(P.buildsWith)}</dd>
           <dt>Projects</dt><dd>${PROJECTS.length} shown, with live sites, code and demo videos</dd>
-          <dt>Open to</dt><dd>Roles, collaborations, and interesting projects</dd>
+          <dt>Status</dt><dd>${esc(P.status)}</dd>
         </dl>
       </div>
     </article>`;
@@ -491,10 +444,12 @@ BUILD.projects = (w, args) => {
 /* ---- Skills (browser window showing every skill) ---- */
 BUILD.skills = (w, args) => {
   const ORDER = [['languages', 6], ['frameworks', 6], ['databases', 6], ['backend', 6], ['salesforce', 12], ['professional', 4], ['pm', 4], ['tooling', 4]];
+  const chip = c => `<span class="sk-chip">${c.icon ? `<img class="sk-ico${c.mono ? ' mono' : ''}" src="assets/icons/${esc(c.icon)}.svg" alt="" width="18" height="18">` : '<i></i>'}${esc(c.name)}</span>`;
   const card = ([k, span]) => {
-    const s = SKILLS[k];
+    const s = SKILLS[k]; if (!s) return '';
     return `<article class="sk-card span-${span}" id="sk-${k}"><h2>${esc(s.title)}</h2>` +
-      (s.items ? `<div class="sk-chips">${s.items.map(i => `<span class="sk-chip"><i></i>${esc(i)}</span>`).join('')}</div>` : '') +
+      (s.sub ? `<p class="sk-sub">${esc(s.sub)}</p>` : '') +
+      (s.chips.length ? `<div class="sk-chips">${s.chips.map(chip).join('')}</div>` : '') +
       (s.notes ? `<ul>${s.notes.map(n => `<li>${esc(n)}</li>`).join('')}</ul>` : '') + '</article>';
   };
   w.tools.innerHTML = '';
@@ -570,18 +525,18 @@ BUILD.terminal = (w, args) => {
       if (!p) { line(`<span class="t-warn">Nothing called "${esc(arg)}".</span> Try "projects" or "help".`); return; }
       openApp('projects', { select: p.id }); line(`<span class="t-ok">Opening ${esc(p.name)}</span>`);
     },
-    whoami() { line('Joseph Mtaku, Software Engineer.'); line('<span class="t-dim">Open to roles, collaborations, and interesting projects.</span>'); line(); },
+    whoami() { line(esc(P.name) + ', ' + esc(P.role) + '.'); line('<span class="t-dim">' + esc(P.status) + '.</span>'); line(); },
     contact() {
       line(`  <span class="t-dim">email </span> <a class="t-acc" href="mailto:${EMAIL}">${EMAIL}</a>`);
       line(`  <span class="t-dim">phone </span> ${PHONE}`);
-      line(`  <span class="t-dim">github</span> <a class="t-acc" href="${GITHUB}" target="_blank" rel="noopener noreferrer">github.com/Josephmtaku</a>`); line();
+      line(`  <span class="t-dim">github</span> <a class="t-acc" href="${GITHUB}" target="_blank" rel="noopener noreferrer">${P.githubLabel}</a>`); line();
     },
     neofetch() {
       const art = ['      ██╗   ', '      ██║   ', '      ██║   ', ' ██   ██║   ', ' ╚█████╔╝   ', '  ╚════╝    '];
       const rows = [
         '<span class="t-acc t-b">joseph</span>@<span class="t-acc t-b">portfolio</span>', '<span class="t-dim">----------------</span>',
-        `<span class="t-acc">Role     </span> Software Engineer`, `<span class="t-acc">Languages</span> ${SKILLS.languages.items.join(', ')}`,
-        `<span class="t-acc">Builds on</span> React Native, Node.js, Salesforce`, `<span class="t-acc">Projects </span> ${PROJECTS.length}`, `<span class="t-acc">Status   </span> <span class="t-ok">Open to roles and collaborations</span>`];
+        `<span class="t-acc">Role     </span> ${P.role}`, `<span class="t-acc">Languages</span> ${SKILLS.languages.items.join(', ')}`,
+        `<span class="t-acc">Builds on</span> ${P.buildsWith}`, `<span class="t-acc">Projects </span> ${PROJECTS.length}`, `<span class="t-acc">Status   </span> <span class="t-ok">Open to roles and collaborations</span>`];
       rows.forEach((r, i) => line(`<span class="t-acc">${art[i] || '            '}</span> ${r}`)); line();
     },
     theme(arg) {
@@ -652,15 +607,15 @@ BUILD.contact = (w) => {
   w.body.innerHTML = `
     <div class="mail">
       <form class="m-compose" autocomplete="off">
-        <div class="m-row"><label>To</label><span class="fixed">Joseph Mtaku &lt;${EMAIL}&gt;</span></div>
+        <div class="m-row"><label>To</label><span class="fixed">${esc(P.name)} &lt;${EMAIL}&gt;</span></div>
         <div class="m-row"><label for="mSub">Subject</label><input id="mSub" type="text" value="Hello Joseph" placeholder="Subject"></div>
         <textarea class="m-body" id="mBody" placeholder="Tell me about the role or project, and the best way to reach you." aria-label="Message"></textarea>
       </form>
       <aside class="m-side">
         <div><h3>Let's talk</h3><p>I'm open to roles, collaborations, and interesting projects. Write a message here and it opens in your mail app, or use the details below.</p></div>
         <div class="m-card"><small>Email</small><div class="row"><span class="v">${EMAIL}</span><button type="button" data-copy="${EMAIL}" data-msg="Email copied">Copy</button></div></div>
-        <div class="m-card"><small>Phone</small><div class="row"><a class="v" href="tel:+447404879754" style="text-decoration:none">${PHONE}</a><button type="button" data-copy="${PHONE}" data-msg="Phone number copied">Copy</button></div></div>
-        <div class="m-card"><small>GitHub</small><div class="row"><span class="v">Josephmtaku</span><a class="cp" href="${GITHUB}" target="_blank" rel="noopener noreferrer">Open</a></div></div>
+        <div class="m-card"><small>Phone</small><div class="row"><a class="v" href="tel:${P.phoneLink}" style="text-decoration:none">${PHONE}</a><button type="button" data-copy="${PHONE}" data-msg="Phone number copied">Copy</button></div></div>
+        <div class="m-card"><small>GitHub</small><div class="row"><span class="v">${esc(P.githubLabel)}</span><a class="cp" href="${GITHUB}" target="_blank" rel="noopener noreferrer">Open</a></div></div>
       </aside>
     </div>`;
   const send = () => {
@@ -893,7 +848,7 @@ function buildIndex() {
   Object.keys(SKILLS).forEach(k => (SKILLS[k].items || []).forEach(item => idx.push({ group: 'Skills', title: item, sub: SKILLS[k].title, kw: k, icon: G.term.replace('var(--accent)', '#00AEFF'), run: () => openApp('skills', { focus: k }) })));
   idx.push({ group: 'Contact', title: 'Email Joseph', sub: EMAIL, kw: 'mail hire message contact', icon: G.mail.replace('#fff', '#08907c').replace('#08907c" stroke', '#fff" stroke'), run: () => openApp('contact') });
   idx.push({ group: 'Contact', title: 'Copy phone number', sub: PHONE, kw: 'call phone mobile number', icon: G.mail, run: () => copyText(PHONE, 'Phone number copied') });
-  idx.push({ group: 'Contact', title: 'GitHub profile', sub: 'github.com/Josephmtaku', kw: 'code repositories git', icon: G.folder, run: () => window.open(GITHUB, '_blank', 'noopener') });
+  idx.push({ group: 'Contact', title: 'GitHub profile', sub: P.githubLabel, kw: 'code repositories git', icon: G.folder, run: () => window.open(GITHUB, '_blank', 'noopener') });
   return idx;
 }
 function score(item, q) {
@@ -987,6 +942,8 @@ function lockScreen() {
 }
 
 function start() {
+  const av = $('.login-avatar'), ln = $('.login-name'), lr = $('.login-role');
+  if (av && P.photo) av.src = P.photo; if (ln && P.name) ln.textContent = P.name; if (lr && P.role) lr.textContent = P.role;
   tick(); setInterval(tick, 10000);
   const boot = $('#boot'), login = $('#login');
   $('#loginBtn').addEventListener('click', unlock);

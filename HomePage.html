@@ -26,7 +26,7 @@
             <div class="content">
                 <div class="text">
                     <h1>About Joseph</h1>
-                    <p>I am an enthusiastic and adaptable Software Engineer with experience in object-oriented programming. I am a quick learner and team player who brings strong communication skills and a creative approach to problem-solving. I am eager to contribute to a progressive organization and deliver value through innovation and collaboration.</p>
+                    <p data-bind="profile.bio"></p>
                     <p class="download-text">Want to see some of my work?</p>
                     <div class="button-group">
                         <a href="Projects.html" class="get-started-btn btn-projects">View my projects <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg></a>
@@ -53,6 +53,8 @@
     </footer>
 
     <div id="bootfx" aria-hidden="true"><b>J</b><i></i></div>
+    <script src="content.js"></script>
+    <script src="classic.js"></script>
     <script>
     (function () {
         var fx = document.getElementById('bootfx');

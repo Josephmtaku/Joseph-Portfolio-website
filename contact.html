@@ -140,8 +140,8 @@
                 <h1>Contact Me</h1>
                 <p>I’m open to roles, collaborations, and interesting projects.</p>
                 <div class="contact-list">
-                    <div>📞 07404&nbsp;879&nbsp;754</div>
-                    <div>📧 <a href="mailto:j.mtaku@icloud.com">j.mtaku@icloud.com</a></div>
+                    <div>📞 <span data-bind="profile.phone"></span></div>
+                    <div>📧 <a data-href="profile.email" data-prefix="mailto:" data-bind="profile.email" href="#"></a></div>
                 </div>
             </div>
         </div>
@@ -152,5 +152,7 @@
             <p>© 2025 Joseph Mtaku</p>
         </div>
     </footer>
+  <script src="content.js"></script>
+  <script src="classic.js"></script>
 </body>
 </html>
