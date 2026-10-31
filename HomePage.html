@@ -6,10 +6,6 @@
     <title>Joseph Mtaku Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="download_styles.css">
-    <style>
-        .cool-btn { background: #00AEFF; }
-        .cool-btn:hover { background: #0090d6; }
-    </style>
 </head>
 <body>
     <header>
@@ -33,11 +29,17 @@
                     <p class="download-text">Want to see some of my work?</p>
                     <div class="button-group">
                         <a href="Projects.html" class="get-started-btn">Projects</a>
-                        <a href="desktop.html" class="get-started-btn cool-btn">Want to see something cool?</a>
+                        <a href="desktop.html" class="cool" id="coolBtn" aria-label="Want to see something cool? Opens an interactive desktop version of this portfolio">
+                            <span class="cool-in">
+                                <span class="cool-lights" aria-hidden="true"><i></i><i></i><i></i></span>
+                                <span class="cool-txt">Want to see something cool?<small>An interactive desktop version of this portfolio</small></span>
+                                <span class="cool-go" aria-hidden="true">Boot it up</span>
+                            </span>
+                        </a>
                     </div>
                 </div>
                 <div class="image">
-                    <a href><img src="assets/IMG_9568.JPG" alt="Joseph Image"></a>
+                    <a href="desktop.html" id="coolPhoto" title="Psst, click me"><img src="assets/IMG_9568.JPG" alt="Joseph Image"></a>
                 </div>
             </div>
         </div>
@@ -48,5 +50,30 @@
             <p>© 2025 Joseph Mtaku</p>
         </div>
     </footer>
+
+    <div id="bootfx" aria-hidden="true"><b>J</b><i></i></div>
+    <script>
+    (function () {
+        var fx = document.getElementById('bootfx');
+        function boot(e) {
+            if (e) e.preventDefault();
+            var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+            if (reduce) { location.href = 'desktop.html'; return; }
+            fx.classList.add('on');
+            setTimeout(function () { location.href = 'desktop.html'; }, 1000);
+        }
+        ['coolBtn', 'coolPhoto'].forEach(function (id) { var el = document.getElementById(id); if (el) el.addEventListener('click', boot); });
+        /* easter egg: type "mac" or "cool" anywhere */
+        var buf = '';
+        addEventListener('keydown', function (e) {
+            if (e.metaKey || e.ctrlKey || e.altKey || !e.key || e.key.length !== 1) return;
+            var t = e.target && e.target.tagName; if (t === 'INPUT' || t === 'TEXTAREA') return;
+            buf = (buf + e.key.toLowerCase()).slice(-4);
+            if (buf.slice(-3) === 'mac' || buf === 'cool') boot();
+        });
+        /* come back from the back button cleanly */
+        addEventListener('pageshow', function () { fx.classList.remove('on'); });
+    })();
+    </script>
 </body>
 </html>
