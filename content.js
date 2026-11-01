@@ -107,7 +107,7 @@ window.SITE = {
       badges: ['Salesforce', 'Apex', 'Service Cloud', 'Omni‑Channel'],
       role: 'Developer',
       status: 'Completed',
-      thumb: 'assets/smartqueue-thumb.png',
+      thumb: 'assets/smartqueue-thumb.PNG',
       links: [
         { label: 'Case Study', href: 'https://docs.google.com/document/d/1qB0E5MQZLDS8s83pcL0P8GY7R6nPbl87PqE7O4NcEtc/edit?usp=sharing', primary: true }
       ]
