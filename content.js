@@ -64,7 +64,7 @@ window.SITE = {
       role: 'Front-end & DB',
       status: 'Live',
       thumb: 'assets/psci-thumb.png',
-      thumbSmall: 'assets/psci-thumb.jpg',
+      thumbSmall: 'assets/psci-thumb.png',
       links: [
         { label: 'Live Site', href: 'https://josephmtaku.github.io/PSCI-church-Management-System/', primary: true },
         { label: 'GitHub', href: 'https://github.com/Josephmtaku/PSCI-church-Management-System.git' }
