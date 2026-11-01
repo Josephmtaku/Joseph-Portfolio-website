@@ -64,7 +64,7 @@ window.SITE = {
       role: 'Front-end & DB',
       status: 'Live',
       thumb: 'assets/psci-thumb.png',
-      thumbSmall: 'assets/psci-thumb.png',
+      thumbSmall: 'assets/psci-thumb.jpg',
       links: [
         { label: 'Live Site', href: 'https://josephmtaku.github.io/PSCI-church-Management-System/', primary: true },
         { label: 'GitHub', href: 'https://github.com/Josephmtaku/PSCI-church-Management-System.git' }
@@ -146,6 +146,18 @@ window.SITE = {
       status: 'In Development',
       badges: ['Vanilla JavaScript','Node.js','Speech Recognition','AI','Full-Text Bible Index'],
       thumb: 'assets/velora-showcase.png',
+      links: []
+    },
+    {
+      id: 'lyra',
+      name: 'Lyra',
+      title: 'Lyra (Intelligent Vocal Tuning Plugin)',
+      desc: 'A real-time vocal tuning plugin for Logic Pro that listens to a singer, detects the song\u2019s key and scale automatically, and corrects pitch as they sing, from transparent, natural tuning to the classic hard-tune effect. Built on a custom pitch- and key-detection engine with formant-preserving pitch shifting, as little as 8.6 ms latency and a lightweight CPU footprint, wrapped in a minimal glass interface.',
+      tags: [],
+      role: 'Audio Software Engineer & DSP Developer',
+      status: 'In Development',
+      badges: ['C++', 'JUCE', 'Digital Signal Processing', 'Audio Unit (AU)', 'Pitch Detection'],
+      thumb: 'assets/lyra.png',
       links: []
     }
 

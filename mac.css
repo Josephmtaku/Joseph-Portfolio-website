@@ -562,3 +562,6 @@ html[data-theme="dark"] .sk-ico.mono { filter: brightness(0) invert(1); opacity:
 .f-info .prev { position: relative; width: 100%; }
 .f-info .prev > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .f-info .prev video, .f-info .prev .prev-play { position: absolute; inset: 0; }
+.f-info { display: flex; flex-direction: column; }
+.f-info > * { flex-shrink: 0; }
+.f-info .prev { aspect-ratio: 16 / 9; height: auto; }
