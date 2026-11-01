@@ -123,7 +123,20 @@ window.SITE = {
       status: 'Completed',
       thumb: 'assets/Telecom%20Billing%20System%20Showcase.png',
       links: []
+    },
+    {
+      id: 'ivelora',
+      name: 'Velora',
+      title: 'Velora (AI Bible Presentation System)',
+      desc: 'An AI presentation system that listens to a live speaker and displays the correct Bible passage the moment it is mentioned, even when the speaker paraphrases it. Transforms messy, error-prone speech into accurate on-screen scripture within seconds using speech recognition, a custom detection pipeline, an AI model, and a full-text Bible index.',
+      category: ['backend', 'web', 'ai'],
+      role: 'Software Engineer & AI Developer',
+      status: 'In Development',
+      badges: ['Vanilla JavaScript','Node.js','Speech Recognition','AI','Full-Text Bible Index'],
+      thumb: 'assets/Velora%20Showcase.png',
+      links: []
     }
+
   ],
 
   /* ---------- Skills ----------
