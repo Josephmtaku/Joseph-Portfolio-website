@@ -133,7 +133,7 @@ window.SITE = {
       role: 'Software Engineer & AI Developer',
       status: 'In Development',
       badges: ['Vanilla JavaScript','Node.js','Speech Recognition','AI','Full-Text Bible Index'],
-      thumb: 'assets/Velora%20Showcase.PNG',
+      thumb: 'assets/Velora%20Showcase.png',
       links: []
     }
 
