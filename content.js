@@ -125,6 +125,18 @@ window.SITE = {
       links: []
     },
     {
+      id: 'globalgrocery',
+      name: 'Global Grocery CRM',
+      title: 'Global Grocery CRM (Salesforce Sales & Service Cloud)',
+      desc: 'End-to-end Salesforce Sales and Service Cloud implementation for Global Grocery, delivered by a 6-person team. Leads are captured, scored, routed by region and converted through to quotes and contracts, using regional price books in four currencies. Customer cases arrive by email, web form and chat, are routed to skilled agents with Omni-Channel, and are tracked against SLA milestones and tiered service contracts. Includes a self-service community with knowledge articles, plus sales and service dashboards.',
+      tags: ['backend', 'web', 'salesforce'],
+      badges: ['Salesforce', 'Sales Cloud', 'Service Cloud', 'Flow', 'Omni-Channel', 'Experience Cloud'],
+      role: 'Group Leader & Salesforce Administrator',
+      status: 'Completed',
+      thumb: 'assets/global-grocery-crm.png',
+      links: []
+    },
+    {
       id: 'ivelora',
       name: 'Velora',
       title: 'Velora (AI Presentation System)',
